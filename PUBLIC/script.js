@@ -1,5 +1,5 @@
 // --- Configuración global ---
-const API_BASE_URL = 'http://localhost:3001';
+const API_BASE_URL = 'https://tpi-modulo3-delgado-garcia-higuera.onrender.com';
 let authToken = localStorage.getItem('token') || null;
 
 // --- Autenticación ---
