@@ -1,4 +1,4 @@
-const bookModel = require('../models/bookModel');
+const bookModel = require('../MODELS/bookModel');
 
 class BookService { // Clase BookService para manejar la lógica de negocio relacionada con los libros
     // Esta clase se encarga de interactuar con el modelo de libros y proporciona métodos
