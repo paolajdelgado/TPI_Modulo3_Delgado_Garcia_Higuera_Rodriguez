@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookstore Management</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .user-item,
+      .book-item {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .data-display {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bookshop</h1>
+
+      <div id="auth-status"></div>
+
+      <h2>Users</h2>
+      <div class="management-options">
+        <button onclick="checkAuthThen('fetchAllUsers')">List all Users</button>
+        <button onclick="checkAuthThen('openUserForm')">Register New User</button>
+      </div>
+      <div id="usuarios-lista" class="data-display"></div>
+
+      <h2>Books</h2>
+      <div class="management-options">
+        <button onclick="fetchAllBooks()">List of all Books</button>
+        <button onclick="checkAuthThen('openBookForm', 'create')">Add Book</button>
+        <button onclick="checkAuthThen('openBookForm', 'modify')">Modify Book</button>
+        <button onclick="checkAuthThen('openBookForm', 'delete')">Delete Book</button>
+      </div>
+      <div id="libros-lista" class="data-display"></div>
+
+      <div id="login-form" style="display: none">
+        <h3>Login</h3>
+        <form onsubmit="handleLogin(event)">
+          <input type="text" id="login-username" placeholder="Username" required />
+          <input type="password" id="login-password" placeholder="Password" required />
+          <button type="submit">Login</button>
+          <button type="button" onclick="closeForm('login-form')">Cancel</button>
+        </form>
+      </div>
+
+      <div id="user-form" style="display: none">
+        <h3>User Form</h3>
+        <form onsubmit="submitUserForm(event)">
+          <input type="text" id="user-username" placeholder="User Name" required />
+          <input type="password" id="user-password" placeholder="User Password" required />
+          <select id="user-role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+          <button type="submit">Submit</button>
+          <button type="button" onclick="closeForm('user-form')">Cancel</button>
+        </form>
+      </div>
+
+      <div id="book-form" style="display: none">
+        <h3>Book Form</h3>
+        <form onsubmit="submitBookForm(event)">
+          <input type="hidden" id="book-action" />
+          <input type="number" id="book-id" placeholder="Book ID (for modify/delete)" />
+          <input type="text" id="book-title" placeholder="Book Title" required />
+          <input type="text" id="book-author" placeholder="Book Author" required />
+          <input type="number" id="book-year" placeholder="Book Year" required />
+          <input type="number" id="book-stock" placeholder="Book Stock" required />
+          <button type="submit">Submit</button>
+          <button type="button" onclick="closeForm('book-form')">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
