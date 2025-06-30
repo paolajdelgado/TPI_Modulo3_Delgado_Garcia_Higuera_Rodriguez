@@ -48,6 +48,7 @@ El proyecto sigue la estructura del patrón MVC:
 3. Posicionate en la terminal dentro de la carpeta 📂 Integrador_Delgado_Garcia_Higuera_Rodriguez-->📂 BACKEND 
 4. Enceder el sevidor en la terminal ejecutando el siguiente comando: node index.js
 5. Ingresar a la API desde el navegador utilizando Ctrl + click sobre el enlace http://localhost:3001
+6. O bien, ingresa directamente de https://tpi-modulo3-delgado-garcia-higuera.onrender.com
 
 ​​​                    
                               ​📡​Uso del servidor TCP (server.js)
@@ -62,8 +63,6 @@ La interacción con el servidor se realiza mediante una interfaz gráfica desple
 
 1. Mostrar usuarios: Muestra todos los autores.
 2. Agregar usuario: Permite agregar un nuevo autor.
-3. Modificar usuario: Permite mopdificar características del usuario deseado.
-4. Eliminar usuario: Permite eliminar un autor por ID.
 
 ​​​​​         🚀​Menú de Libros​​​​​🚀​
 
